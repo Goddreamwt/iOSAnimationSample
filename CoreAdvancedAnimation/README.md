@@ -1,7 +1,7 @@
 ## coreAnimation
 
 
-![这里写图片描述](https://img-blog.csdn.net/20180806144935321?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d0ZGFzaw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/QQ20180806-144917.png)
 
 coreAnimation的功能包括绘图和动画
 
@@ -96,12 +96,12 @@ anim.repeatCount = MAXFLOAT;//重复次数
 
 注意：在做view旋转时，它的frame和bound是不一致的
 
-![这里写图片描述](https://img-blog.csdn.net/20180808103330390?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d0ZGFzaw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/QQ20180808-103305.png)
 
 在iOS中，我们改变UIView中的frame，bound，conter分别对应改变layer中的frame，bound，position
 anchorpoint是layer中的锚点，取的是单位坐标。默认的是在视图的中间位置（0.5,0.5）
 
-![这里写图片描述](https://img-blog.csdn.net/20180808103959526?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d0ZGFzaw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/QQ20180808-103950.png)
 
 ```
 //贝塞尔曲线：1.数据点（起点终点）；2.控制点
@@ -132,4 +132,4 @@ anim.rotationMode = kCAAnimationRotateAuto;//自动切换角度，车头的朝�
 
 效果
 
-![这里写图片描述](https://img-blog.csdn.net/20180808112601653?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d0ZGFzaw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/%E6%95%88%E6%9E%9Cgif/car_gif.gif)
