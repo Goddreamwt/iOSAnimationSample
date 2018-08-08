@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "HiddenAnimationViewController.h"
 #import "JitterViewController.h"
+#import "TransitionViewController.h"
 
 @interface ViewController ()
 
@@ -32,6 +33,9 @@
     
     UIButton * jitterBtn =[[UIButton alloc]initWithFrame:CGRectMake(width+l_space, top, width, height)];
     [self createButton:jitterBtn setTitle:@"关键帧动画" addAction:@selector(jitterBtnClick:)];
+    
+    UIButton * transition =[[UIButton alloc]initWithFrame:CGRectMake((width+l_space)*2, top, width, height)];
+    [self createButton:transition setTitle:@"转场动画" addAction:@selector(transitionClick:)];
 }
 -(void)createButton:(UIButton *)btn setTitle:(NSString *)title addAction:(SEL)action{
     [btn setTitle:title forState:UIControlStateNormal];
@@ -49,6 +53,12 @@
 -(void)jitterBtnClick:(UIButton *)btn{
     JitterViewController * jitter =[[JitterViewController alloc]init];
     [self.navigationController pushViewController:jitter animated:NO];
+}
+
+#pragma mark --转场动画
+-(void)transitionClick:(UIButton *)btn{
+    TransitionViewController * transition =[[TransitionViewController alloc]init];
+    [self.navigationController pushViewController:transition animated:NO];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

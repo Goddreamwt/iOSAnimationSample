@@ -18,6 +18,7 @@
 		040D81A32119872800DA4709 /* HiddenAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D81A12119872800DA4709 /* HiddenAnimationViewController.m */; };
 		040D81A721198BD900DA4709 /* WTRedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D81A621198BD900DA4709 /* WTRedView.m */; };
 		040D81AB2119996700DA4709 /* JitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D81AA2119996700DA4709 /* JitterViewController.m */; };
+		0477DD32211AC15C00DF72AE /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DD31211AC15B00DF72AE /* TransitionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		040D81A621198BD900DA4709 /* WTRedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTRedView.m; sourceTree = "<group>"; };
 		040D81A92119996700DA4709 /* JitterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JitterViewController.h; sourceTree = "<group>"; };
 		040D81AA2119996700DA4709 /* JitterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JitterViewController.m; sourceTree = "<group>"; };
+		0477DD30211AC15B00DF72AE /* TransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
+		0477DD31211AC15B00DF72AE /* TransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 		040D816B2119866E00DA4709 /* CoreAdvancedAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				0477DD2F211AC15B00DF72AE /* 转场动画 */,
 				040D81A82119992500DA4709 /* 关键帧动画 */,
 				040D819F2119870300DA4709 /* 隐式动画 */,
 				040D819E211986F100DA4709 /* ohter */,
@@ -169,6 +173,15 @@
 				040D81AA2119996700DA4709 /* JitterViewController.m */,
 			);
 			path = "关键帧动画";
+			sourceTree = "<group>";
+		};
+		0477DD2F211AC15B00DF72AE /* 转场动画 */ = {
+			isa = PBXGroup;
+			children = (
+				0477DD30211AC15B00DF72AE /* TransitionViewController.h */,
+				0477DD31211AC15B00DF72AE /* TransitionViewController.m */,
+			);
+			path = "转场动画";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				040D81AB2119996700DA4709 /* JitterViewController.m in Sources */,
+				0477DD32211AC15C00DF72AE /* TransitionViewController.m in Sources */,
 				040D81712119866E00DA4709 /* ViewController.m in Sources */,
 				040D81A32119872800DA4709 /* HiddenAnimationViewController.m in Sources */,
 				040D81A721198BD900DA4709 /* WTRedView.m in Sources */,
