@@ -19,20 +19,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor =[UIColor whiteColor];
+   
+    CGFloat width =100;
+    CGFloat height = 20;
+    CGFloat l_space = 20;
+    CGFloat v_space = 20;
+    CGFloat top = 80;
     
-    UIButton * hiddenBtn =[[UIButton alloc]initWithFrame:CGRectMake(50, 100, 100, 20)];
-    [hiddenBtn setTitle:@"隐式动画" forState:UIControlStateNormal];
-    [hiddenBtn addTarget:self action:@selector(hiddenBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [hiddenBtn setBackgroundColor:[UIColor grayColor]];
-    [self.view addSubview:hiddenBtn];
     
-    UIButton * jitterBtn =[[UIButton alloc]initWithFrame:CGRectMake(160, 100, 100, 20)];
-    [jitterBtn setTitle:@"关键帧动画" forState:UIControlStateNormal];
-    [jitterBtn addTarget:self action:@selector(jitterBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [jitterBtn setBackgroundColor:[UIColor grayColor]];
-    [self.view addSubview:jitterBtn];
+    UIButton * hiddenBtn =[[UIButton alloc]initWithFrame:CGRectMake(0, top, width, height)];
+    [self createButton:hiddenBtn setTitle:@"隐式动画" addAction:@selector(hiddenBtnClick:)];
+    
+    UIButton * jitterBtn =[[UIButton alloc]initWithFrame:CGRectMake(width+l_space, top, width, height)];
+    [self createButton:jitterBtn setTitle:@"关键帧动画" addAction:@selector(jitterBtnClick:)];
 }
-
+-(void)createButton:(UIButton *)btn setTitle:(NSString *)title addAction:(SEL)action{
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    [btn setBackgroundColor:[UIColor grayColor]];
+    [self.view addSubview:btn];
+}
 #pragma mark --隐式动画
 -(void)hiddenBtnClick:(UIButton *)btn{
     HiddenAnimationViewController * hidden =[[HiddenAnimationViewController alloc]init];

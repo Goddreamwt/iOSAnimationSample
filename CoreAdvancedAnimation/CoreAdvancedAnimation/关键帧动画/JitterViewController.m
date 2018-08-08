@@ -22,7 +22,6 @@
     _image.image =[UIImage imageNamed:@"weixin"];
     [self.view addSubview:_image];
     
-    [self test];
 }
 
 #pragma mark -过山车动画
@@ -42,8 +41,15 @@
     carLayer.frame = CGRectMake(15, 400-18, 36, 36);
     //寄宿图 contents属性
     carLayer.contents =(id)([UIImage imageNamed:@"car"].CGImage);
+    carLayer.anchorPoint = CGPointMake(0.5, 0.8);//设置锚点，轮胎的位置
     [self.view.layer addSublayer:carLayer];
     
+    CAKeyframeAnimation * anim =[CAKeyframeAnimation animation];
+    anim.keyPath = @"position";
+    anim.path = path.CGPath;
+    anim.duration = 4.0;
+    anim.rotationMode = kCAAnimationRotateAuto;//自动切换角度，车头的朝向
+    [carLayer addAnimation:anim forKey:nil];
 }
 
 #pragma mark -抖动效果
@@ -55,10 +61,12 @@
     //方式二
     anim.values =@[@angleToRadians(-3),@angleToRadians(3)];
     anim.speed =2;//动画速度
-//    anim.duration = 1;//持续时间 
+//    anim.duration = 1;//持续时间
     anim.autoreverses =YES;//动画反转
     anim.repeatCount = MAXFLOAT;//重复次数
     [_image.layer addAnimation:anim forKey:nil];
+    
+    [self test];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
