@@ -22,6 +22,7 @@
 		0477DD36211ADC7A00DF72AE /* SkidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DD35211ADC7A00DF72AE /* SkidViewController.m */; };
 		0477DD39211ADE4C00DF72AE /* slideMenuBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DD38211ADE4C00DF72AE /* slideMenuBtn.m */; };
 		0477DD3C211AE6A200DF72AE /* slideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DD3B211AE6A200DF72AE /* slideMenuView.m */; };
+		0477DD40211C338300DF72AE /* LinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DD3F211C338200DF72AE /* LinkViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		0477DD38211ADE4C00DF72AE /* slideMenuBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = slideMenuBtn.m; sourceTree = "<group>"; };
 		0477DD3A211AE6A200DF72AE /* slideMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = slideMenuView.h; sourceTree = "<group>"; };
 		0477DD3B211AE6A200DF72AE /* slideMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = slideMenuView.m; sourceTree = "<group>"; };
+		0477DD3E211C338200DF72AE /* LinkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkViewController.h; sourceTree = "<group>"; };
+		0477DD3F211C338200DF72AE /* LinkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,7 @@
 		040D816B2119866E00DA4709 /* CoreAdvancedAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				0477DD3D211C336400DF72AE /* 点赞动画 */,
 				0477DD33211ADC5E00DF72AE /* 菜单侧滑动画 */,
 				0477DD2F211AC15B00DF72AE /* 转场动画&组动画 */,
 				040D81A82119992500DA4709 /* 关键帧动画 */,
@@ -205,6 +209,15 @@
 				0477DD38211ADE4C00DF72AE /* slideMenuBtn.m */,
 			);
 			path = "菜单侧滑动画";
+			sourceTree = "<group>";
+		};
+		0477DD3D211C336400DF72AE /* 点赞动画 */ = {
+			isa = PBXGroup;
+			children = (
+				0477DD3E211C338200DF72AE /* LinkViewController.h */,
+				0477DD3F211C338200DF72AE /* LinkViewController.m */,
+			);
+			path = "点赞动画";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +357,7 @@
 				040D81712119866E00DA4709 /* ViewController.m in Sources */,
 				0477DD3C211AE6A200DF72AE /* slideMenuView.m in Sources */,
 				040D81A32119872800DA4709 /* HiddenAnimationViewController.m in Sources */,
+				0477DD40211C338300DF72AE /* LinkViewController.m in Sources */,
 				040D81A721198BD900DA4709 /* WTRedView.m in Sources */,
 				040D817C2119866F00DA4709 /* main.m in Sources */,
 				040D816E2119866E00DA4709 /* AppDelegate.m in Sources */,

@@ -11,6 +11,7 @@
 #import "JitterViewController.h"
 #import "TransitionViewController.h"
 #import "SkidViewController.h"
+#import "LinkViewController.h"
 
 @interface ViewController ()
 
@@ -40,6 +41,9 @@
     
     UIButton * skid =[[UIButton alloc]initWithFrame:CGRectMake(0, top+height+v_space, width, height)];
     [self createButton:skid setTitle:@"侧滑动画" addAction:@selector(skidClick:)];
+    
+    UIButton * likeBtn =[[UIButton alloc]initWithFrame:CGRectMake(width+l_space, top+height+v_space, width, height)];
+    [self createButton:likeBtn setTitle:@"点赞动画" addAction:@selector(likeBtnClick:)];
 }
 -(void)createButton:(UIButton *)btn setTitle:(NSString *)title addAction:(SEL)action{
     [btn setTitle:title forState:UIControlStateNormal];
@@ -71,6 +75,11 @@
     [self.navigationController pushViewController:controller animated:NO];
 }
 
+#pragma mark --点赞
+-(void)likeBtnClick:(UIButton *)btn{
+    LinkViewController * controller =[[LinkViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:NO];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
