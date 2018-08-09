@@ -9,3 +9,7 @@
 
 ![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/%E6%95%88%E6%9E%9Cgif/slider.gif)
 
+* 4.CoreAdvancedAnimation:新增点赞动画-粒子动画
+
+![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/%E6%95%88%E6%9E%9Cgif/bangMo2.gif)
+
