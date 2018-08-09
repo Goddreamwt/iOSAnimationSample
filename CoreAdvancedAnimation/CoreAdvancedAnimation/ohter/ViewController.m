@@ -10,6 +10,7 @@
 #import "HiddenAnimationViewController.h"
 #import "JitterViewController.h"
 #import "TransitionViewController.h"
+#import "SkidViewController.h"
 
 @interface ViewController ()
 
@@ -36,6 +37,9 @@
     
     UIButton * transition =[[UIButton alloc]initWithFrame:CGRectMake((width+l_space)*2, top, width, height)];
     [self createButton:transition setTitle:@"转场动画" addAction:@selector(transitionClick:)];
+    
+    UIButton * skid =[[UIButton alloc]initWithFrame:CGRectMake(0, top+height+v_space, width, height)];
+    [self createButton:skid setTitle:@"侧滑动画" addAction:@selector(skidClick:)];
 }
 -(void)createButton:(UIButton *)btn setTitle:(NSString *)title addAction:(SEL)action{
     [btn setTitle:title forState:UIControlStateNormal];
@@ -45,21 +49,29 @@
 }
 #pragma mark --隐式动画
 -(void)hiddenBtnClick:(UIButton *)btn{
-    HiddenAnimationViewController * hidden =[[HiddenAnimationViewController alloc]init];
-    [self.navigationController pushViewController:hidden animated:NO];
+    HiddenAnimationViewController * controller =[[HiddenAnimationViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:NO];
 }
 
 #pragma mark --抖动效果-关键帧动画
 -(void)jitterBtnClick:(UIButton *)btn{
-    JitterViewController * jitter =[[JitterViewController alloc]init];
-    [self.navigationController pushViewController:jitter animated:NO];
+    JitterViewController * controller =[[JitterViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:NO];
 }
 
 #pragma mark --转场动画
 -(void)transitionClick:(UIButton *)btn{
-    TransitionViewController * transition =[[TransitionViewController alloc]init];
-    [self.navigationController pushViewController:transition animated:NO];
+    TransitionViewController * controller =[[TransitionViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:NO];
 }
+
+#pragma mark --侧滑
+-(void)skidClick:(UIButton *)btn{
+    SkidViewController * controller =[[SkidViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:NO];
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
