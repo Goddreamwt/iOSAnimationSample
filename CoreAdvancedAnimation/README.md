@@ -219,7 +219,7 @@ group.duration = 3;
 
 效果图如下：
 
-![这里写图片描述](https://img-blog.csdn.net/20180809091552840?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d0ZGFzaw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/%E6%95%88%E6%9E%9Cgif/slider.gif)
 
 为侧滑动画封装一个slideMenuView
 绘制侧滑动画需要下面几个步骤
@@ -313,7 +313,7 @@ return self;
 ```
 上面代码中的 `self.frame`设置的是下面图片中红色的背景View，它比蓝色弹出View多出menuBlankWidth的长度
 
-![这里写图片描述](https://img-blog.csdn.net/20180809093011253?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d0ZGFzaw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/QQ20180809-092905.png)
 ```
 //绘制蓝色图层 贝塞尔曲线
 -(void)drawRect:(CGRect)rect{
@@ -345,13 +345,13 @@ CGContextFillPath(context);
 }
 ```
 下图是上面代码根据贝塞尔曲线绘制的几个点线位置图
-![这里写图片描述](https://img-blog.csdn.net/20180809093144492?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d0ZGFzaw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/QQ20180809-092659.png)
 
 - 3.思考：那么我们如何让蓝色的View右边框有类似于弹簧动画的效果呢？
 通过2个辅助view helperSideView helperCenterView，求出它们的差值，获取到一组动态的数据
 
 我们需要借助两个小的view在固定区域内做弹簧动画
-![这里写图片描述](https://img-blog.csdn.net/20180809093934998?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d0ZGFzaw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/QQ20180809-093916.png)
 ```
 #pragma mark - lifeCycle
 -(id)initWithBtnTitle:(NSArray *)btnTitles{
@@ -447,7 +447,7 @@ self->helperCenterView.center = CGPointMake(-20, CGRectGetHeight(self->keyWindow
 }];
 }
 ```
-![这里写图片描述](https://img-blog.csdn.net/20180809100955715?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d0ZGFzaw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/%E6%95%88%E6%9E%9Cgif/slide1.gif)
 
 - CADisplayLink 求差值
 
@@ -527,7 +527,7 @@ diff = r1.origin.x - r2.origin.x;
 }
 ```
 
-![image](https://img-blog.csdn.net/20180809103559777?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d0ZGFzaw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/%E6%95%88%E6%9E%9Cgif/slide2.gif)
 
 记得在动画完成时，移除定时器
 
