@@ -12,6 +12,7 @@
 #import "TransitionViewController.h"
 #import "SkidViewController.h"
 #import "LinkViewController.h"
+#import "MatchstickMenViewController.h"
 
 @interface ViewController ()
 
@@ -44,10 +45,14 @@
     
     UIButton * likeBtn =[[UIButton alloc]initWithFrame:CGRectMake(width+l_space, top+height+v_space, width, height)];
     [self createButton:likeBtn setTitle:@"点赞动画" addAction:@selector(likeBtnClick:)];
+    
+    UIButton * matchstickMenBtn =[[UIButton alloc]initWithFrame:CGRectMake(width+l_space, top+height+v_space, width, height)];
+    [self createButton:matchstickMenBtn setTitle:@"火柴人图形" addAction:@selector(matchstickMenBtnClick:)];
 }
 -(void)createButton:(UIButton *)btn setTitle:(NSString *)title addAction:(SEL)action{
     [btn setTitle:title forState:UIControlStateNormal];
     [btn addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    btn.titleLabel.font =[UIFont systemFontOfSize:12.0];
     [btn setBackgroundColor:[UIColor grayColor]];
     [self.view addSubview:btn];
 }
@@ -78,6 +83,12 @@
 #pragma mark --点赞
 -(void)likeBtnClick:(UIButton *)btn{
     LinkViewController * controller =[[LinkViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:NO];
+}
+
+#pragma mark --赛贝尔绘制火柴人
+-(void)matchstickMenBtnClick:(UIButton *)btn{
+    MatchstickMenViewController * controller =[[MatchstickMenViewController alloc]init];
     [self.navigationController pushViewController:controller animated:NO];
 }
 
