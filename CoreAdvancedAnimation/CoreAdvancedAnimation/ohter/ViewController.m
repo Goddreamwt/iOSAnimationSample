@@ -13,6 +13,7 @@
 #import "SkidViewController.h"
 #import "LinkViewController.h"
 #import "MatchstickMenViewController.h"
+#import "SublayerViewController.h"
 
 @interface ViewController ()
 
@@ -31,23 +32,26 @@
     CGFloat top = 80;
     
     
-    UIButton * hiddenBtn =[[UIButton alloc]initWithFrame:CGRectMake(0, top, width, height)];
+    UIButton * hiddenBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space, top, width, height)];
     [self createButton:hiddenBtn setTitle:@"隐式动画" addAction:@selector(hiddenBtnClick:)];
     
-    UIButton * jitterBtn =[[UIButton alloc]initWithFrame:CGRectMake(width+l_space, top, width, height)];
+    UIButton * jitterBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space+width+l_space, top, width, height)];
     [self createButton:jitterBtn setTitle:@"关键帧动画" addAction:@selector(jitterBtnClick:)];
     
-    UIButton * transition =[[UIButton alloc]initWithFrame:CGRectMake((width+l_space)*2, top, width, height)];
+    UIButton * transition =[[UIButton alloc]initWithFrame:CGRectMake(l_space+(width+l_space)*2, top, width, height)];
     [self createButton:transition setTitle:@"转场动画" addAction:@selector(transitionClick:)];
     
-    UIButton * skid =[[UIButton alloc]initWithFrame:CGRectMake(0, top+height+v_space, width, height)];
+    UIButton * skid =[[UIButton alloc]initWithFrame:CGRectMake(l_space, top+height+v_space, width, height)];
     [self createButton:skid setTitle:@"侧滑动画" addAction:@selector(skidClick:)];
     
-    UIButton * likeBtn =[[UIButton alloc]initWithFrame:CGRectMake(width+l_space, top+height+v_space, width, height)];
+    UIButton * likeBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space+width+l_space, top+height+v_space, width, height)];
     [self createButton:likeBtn setTitle:@"点赞动画" addAction:@selector(likeBtnClick:)];
     
-    UIButton * matchstickMenBtn =[[UIButton alloc]initWithFrame:CGRectMake(width+l_space, top+height+v_space, width, height)];
+    UIButton * matchstickMenBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space+width+l_space, top+height+v_space, width, height)];
     [self createButton:matchstickMenBtn setTitle:@"火柴人图形" addAction:@selector(matchstickMenBtnClick:)];
+    
+    UIButton * subLayerBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space+(width+l_space)*2, top+height+v_space, width, height)];
+    [self createButton:subLayerBtn setTitle:@"子图层" addAction:@selector(subLayerBtnClick:)];
 }
 -(void)createButton:(UIButton *)btn setTitle:(NSString *)title addAction:(SEL)action{
     [btn setTitle:title forState:UIControlStateNormal];
@@ -89,6 +93,12 @@
 #pragma mark --赛贝尔绘制火柴人
 -(void)matchstickMenBtnClick:(UIButton *)btn{
     MatchstickMenViewController * controller =[[MatchstickMenViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:NO];
+}
+
+#pragma mark --子图层(渐变+3D+富文本等)
+-(void)subLayerBtnClick:(UIButton *)btn{
+    SublayerViewController * controller =[[SublayerViewController alloc]init];
     [self.navigationController pushViewController:controller animated:NO];
 }
 

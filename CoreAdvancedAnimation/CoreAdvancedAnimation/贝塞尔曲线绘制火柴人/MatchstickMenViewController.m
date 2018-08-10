@@ -7,7 +7,6 @@
 //
 
 #import "MatchstickMenViewController.h"
-#import <CoreText/CoreText.h>
 
 @interface MatchstickMenViewController ()
 
@@ -18,25 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor =[UIColor whiteColor];
-    [self shaperLayer];
-    
-    [self textLayer];
-}
--(void)textLayer{
-    CATextLayer * textLayer =[CATextLayer layer];
-    textLayer.frame = CGRectMake(100, 400, 200, 50);
-    textLayer.backgroundColor =[UIColor greenColor].CGColor;
-//    textLayer.string = @"HelloWorld";
-    textLayer.alignmentMode = kCAAlignmentCenter;
-    textLayer.fontSize = [UIFont systemFontOfSize:20].pointSize;
-    textLayer.foregroundColor =[UIColor blackColor].CGColor;
-    [self.view.layer addSublayer:textLayer];
-    
-    //富文本
-    NSMutableAttributedString *str =[[NSMutableAttributedString alloc]initWithString:@"hello world"];
-    NSDictionary *attribs = @{(id)kCTForegroundColorAttributeName:(id)[UIColor redColor]};
-    [str setAttributes:attribs range:NSMakeRange(0, 5)];
-    textLayer.string = str;
+
 }
 
 -(void)shaperLayer{

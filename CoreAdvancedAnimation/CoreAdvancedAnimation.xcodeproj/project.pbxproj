@@ -24,6 +24,7 @@
 		0477DD3C211AE6A200DF72AE /* slideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DD3B211AE6A200DF72AE /* slideMenuView.m */; };
 		0477DD40211C338300DF72AE /* LinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DD3F211C338200DF72AE /* LinkViewController.m */; };
 		0477DD44211D3D0100DF72AE /* MatchstickMenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DD43211D3D0100DF72AE /* MatchstickMenViewController.m */; };
+		0477DD48211D7E4200DF72AE /* SublayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DD47211D7E4200DF72AE /* SublayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		0477DD3F211C338200DF72AE /* LinkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkViewController.m; sourceTree = "<group>"; };
 		0477DD42211D3D0100DF72AE /* MatchstickMenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchstickMenViewController.h; sourceTree = "<group>"; };
 		0477DD43211D3D0100DF72AE /* MatchstickMenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchstickMenViewController.m; sourceTree = "<group>"; };
+		0477DD46211D7E4200DF72AE /* SublayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SublayerViewController.h; sourceTree = "<group>"; };
+		0477DD47211D7E4200DF72AE /* SublayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SublayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +131,8 @@
 		040D816B2119866E00DA4709 /* CoreAdvancedAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				0477DD41211D3CEA00DF72AE /* 绘制火柴人 */,
+				0477DD45211D7E1100DF72AE /* 子图层 */,
+				0477DD41211D3CEA00DF72AE /* 贝塞尔曲线绘制火柴人 */,
 				0477DD3D211C336400DF72AE /* 点赞动画 */,
 				0477DD33211ADC5E00DF72AE /* 菜单侧滑动画 */,
 				0477DD2F211AC15B00DF72AE /* 转场动画&组动画 */,
@@ -224,13 +228,22 @@
 			path = "点赞动画";
 			sourceTree = "<group>";
 		};
-		0477DD41211D3CEA00DF72AE /* 绘制火柴人 */ = {
+		0477DD41211D3CEA00DF72AE /* 贝塞尔曲线绘制火柴人 */ = {
 			isa = PBXGroup;
 			children = (
 				0477DD42211D3D0100DF72AE /* MatchstickMenViewController.h */,
 				0477DD43211D3D0100DF72AE /* MatchstickMenViewController.m */,
 			);
-			path = "绘制火柴人";
+			path = "贝塞尔曲线绘制火柴人";
+			sourceTree = "<group>";
+		};
+		0477DD45211D7E1100DF72AE /* 子图层 */ = {
+			isa = PBXGroup;
+			children = (
+				0477DD46211D7E4200DF72AE /* SublayerViewController.h */,
+				0477DD47211D7E4200DF72AE /* SublayerViewController.m */,
+			);
+			path = "子图层";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +378,7 @@
 			files = (
 				040D81AB2119996700DA4709 /* JitterViewController.m in Sources */,
 				0477DD39211ADE4C00DF72AE /* slideMenuBtn.m in Sources */,
+				0477DD48211D7E4200DF72AE /* SublayerViewController.m in Sources */,
 				0477DD36211ADC7A00DF72AE /* SkidViewController.m in Sources */,
 				0477DD32211AC15C00DF72AE /* TransitionViewController.m in Sources */,
 				040D81712119866E00DA4709 /* ViewController.m in Sources */,
