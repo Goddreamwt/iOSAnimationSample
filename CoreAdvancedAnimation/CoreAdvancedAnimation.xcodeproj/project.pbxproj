@@ -28,6 +28,8 @@
 		0477DD4C211D9A4F00DF72AE /* CustomTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DD4B211D9A4F00DF72AE /* CustomTransitionViewController.m */; };
 		0477DD4F211D9C4000DF72AE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DD4E211D9C4000DF72AE /* SecondViewController.m */; };
 		04EE560621211B4200D74017 /* UIView+UIView_Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE560521211B4200D74017 /* UIView+UIView_Gradient.m */; };
+		04EE5609212123E700D74017 /* UILabel+MoneyAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE5608212123E700D74017 /* UILabel+MoneyAnimation.m */; };
+		04EE560D212125D700D74017 /* NumberAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE560C212125D700D74017 /* NumberAnimationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,10 @@
 		0477DD4E211D9C4000DF72AE /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		04EE560421211B4200D74017 /* UIView+UIView_Gradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+UIView_Gradient.h"; sourceTree = "<group>"; };
 		04EE560521211B4200D74017 /* UIView+UIView_Gradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIView_Gradient.m"; sourceTree = "<group>"; };
+		04EE5607212123E700D74017 /* UILabel+MoneyAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+MoneyAnimation.h"; sourceTree = "<group>"; };
+		04EE5608212123E700D74017 /* UILabel+MoneyAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MoneyAnimation.m"; sourceTree = "<group>"; };
+		04EE560B212125D700D74017 /* NumberAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberAnimationViewController.h; sourceTree = "<group>"; };
+		04EE560C212125D700D74017 /* NumberAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberAnimationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				04EE560321211AE900D74017 /* WTCategory */,
+				04EE560A2121253100D74017 /* 数字跳动动画 */,
 				0477DD49211D9A1500DF72AE /* 自定义转场动画 */,
 				0477DD45211D7E1100DF72AE /* 子图层 */,
 				0477DD41211D3CEA00DF72AE /* 贝塞尔曲线绘制火柴人 */,
@@ -273,8 +280,19 @@
 			children = (
 				04EE560421211B4200D74017 /* UIView+UIView_Gradient.h */,
 				04EE560521211B4200D74017 /* UIView+UIView_Gradient.m */,
+				04EE5607212123E700D74017 /* UILabel+MoneyAnimation.h */,
+				04EE5608212123E700D74017 /* UILabel+MoneyAnimation.m */,
 			);
 			path = WTCategory;
+			sourceTree = "<group>";
+		};
+		04EE560A2121253100D74017 /* 数字跳动动画 */ = {
+			isa = PBXGroup;
+			children = (
+				04EE560B212125D700D74017 /* NumberAnimationViewController.h */,
+				04EE560C212125D700D74017 /* NumberAnimationViewController.m */,
+			);
+			path = "数字跳动动画";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,10 +436,12 @@
 				040D81A32119872800DA4709 /* HiddenAnimationViewController.m in Sources */,
 				0477DD40211C338300DF72AE /* LinkViewController.m in Sources */,
 				040D81A721198BD900DA4709 /* WTRedView.m in Sources */,
+				04EE5609212123E700D74017 /* UILabel+MoneyAnimation.m in Sources */,
 				040D817C2119866F00DA4709 /* main.m in Sources */,
 				0477DD44211D3D0100DF72AE /* MatchstickMenViewController.m in Sources */,
 				04EE560621211B4200D74017 /* UIView+UIView_Gradient.m in Sources */,
 				0477DD4C211D9A4F00DF72AE /* CustomTransitionViewController.m in Sources */,
+				04EE560D212125D700D74017 /* NumberAnimationViewController.m in Sources */,
 				040D816E2119866E00DA4709 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

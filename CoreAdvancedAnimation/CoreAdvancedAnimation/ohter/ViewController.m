@@ -15,6 +15,7 @@
 #import "MatchstickMenViewController.h"
 #import "SublayerViewController.h"
 #import "CustomTransitionViewController.h"
+#import "NumberAnimationViewController.h"
 
 @interface ViewController ()
 
@@ -56,6 +57,9 @@
     
     UIButton *customTransitionBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space, top+(height+v_space)*2, width, height)];
     [self createButton:customTransitionBtn setTitle:@"自定义转场" addAction:@selector(customTransitionBtnClick:)];
+    
+    UIButton *numberAnimationBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space+width+l_space, top+(height+v_space)*2, width, height)];
+    [self createButton:numberAnimationBtn setTitle:@"数字跳动" addAction:@selector(numberAnimationBtnClick:)];
 }
 -(void)createButton:(UIButton *)btn setTitle:(NSString *)title addAction:(SEL)action{
     [btn setTitle:title forState:UIControlStateNormal];
@@ -109,6 +113,12 @@
 #pragma mark --自定义转场动画
 -(void)customTransitionBtnClick:(UIButton *)btn{
     CustomTransitionViewController * controller =[[CustomTransitionViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:NO];
+}
+
+#pragma mark --数字跳动动画
+-(void)numberAnimationBtnClick:(UIButton *)btn{
+    NumberAnimationViewController * controller =[[NumberAnimationViewController alloc]init];
     [self.navigationController pushViewController:controller animated:NO];
 }
 
