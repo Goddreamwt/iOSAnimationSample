@@ -46,8 +46,6 @@
     UIButton * skid =[[UIButton alloc]initWithFrame:CGRectMake(l_space, top+height+v_space, width, height)];
     [self createButton:skid setTitle:@"侧滑动画" addAction:@selector(skidClick:)];
     
-    UIButton * likeBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space+width+l_space, top+height+v_space, width, height)];
-    [self createButton:likeBtn setTitle:@"点赞动画" addAction:@selector(likeBtnClick:)];
     
     UIButton * matchstickMenBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space+width+l_space, top+height+v_space, width, height)];
     [self createButton:matchstickMenBtn setTitle:@"火柴人图形" addAction:@selector(matchstickMenBtnClick:)];
@@ -60,6 +58,9 @@
     
     UIButton *numberAnimationBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space+width+l_space, top+(height+v_space)*2, width, height)];
     [self createButton:numberAnimationBtn setTitle:@"数字跳动" addAction:@selector(numberAnimationBtnClick:)];
+    
+    UIButton * likeBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space+(width+l_space)*2, top+(height+v_space)*2, width, height)];
+    [self createButton:likeBtn setTitle:@"点赞动画" addAction:@selector(likeBtnClick:)];
 }
 -(void)createButton:(UIButton *)btn setTitle:(NSString *)title addAction:(SEL)action{
     [btn setTitle:title forState:UIControlStateNormal];

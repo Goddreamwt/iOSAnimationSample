@@ -36,8 +36,8 @@
 - (void)changeFlight {
   
    _number++;
-    NSString *string = [NSString stringWithFormat:@"%@%d",@"日子一天天过去",_number];
-   [_lb2 wt_setTextPageAnimation:string direction:positive];
+    NSString *string = [NSString stringWithFormat:@"%@%d",@"日子一天天过去:",_number];
+   [_lb2 wt_setTextPageAnimation:string direction:negative];
     
     double delayInSeconds = 3.0;
     __block NumberAnimationViewController* bself = self;

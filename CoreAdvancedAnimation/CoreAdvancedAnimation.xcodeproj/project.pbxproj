@@ -151,7 +151,7 @@
 				0477DD49211D9A1500DF72AE /* 自定义转场动画 */,
 				0477DD45211D7E1100DF72AE /* 子图层 */,
 				0477DD41211D3CEA00DF72AE /* 贝塞尔曲线绘制火柴人 */,
-				0477DD3D211C336400DF72AE /* 点赞动画 */,
+				0477DD3D211C336400DF72AE /* 粒子(点赞&雪花)动画 */,
 				0477DD33211ADC5E00DF72AE /* 菜单侧滑动画 */,
 				0477DD2F211AC15B00DF72AE /* 转场动画&组动画 */,
 				040D81A82119992500DA4709 /* 关键帧动画 */,
@@ -237,13 +237,13 @@
 			path = "菜单侧滑动画";
 			sourceTree = "<group>";
 		};
-		0477DD3D211C336400DF72AE /* 点赞动画 */ = {
+		0477DD3D211C336400DF72AE /* 粒子(点赞&雪花)动画 */ = {
 			isa = PBXGroup;
 			children = (
 				0477DD3E211C338200DF72AE /* LinkViewController.h */,
 				0477DD3F211C338200DF72AE /* LinkViewController.m */,
 			);
-			path = "点赞动画";
+			path = "粒子(点赞&雪花)动画";
 			sourceTree = "<group>";
 		};
 		0477DD41211D3CEA00DF72AE /* 贝塞尔曲线绘制火柴人 */ = {
