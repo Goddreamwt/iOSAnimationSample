@@ -14,6 +14,7 @@
 #import "LinkViewController.h"
 #import "MatchstickMenViewController.h"
 #import "SublayerViewController.h"
+#import "CustomTransitionViewController.h"
 
 @interface ViewController ()
 
@@ -52,6 +53,9 @@
     
     UIButton * subLayerBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space+(width+l_space)*2, top+height+v_space, width, height)];
     [self createButton:subLayerBtn setTitle:@"子图层" addAction:@selector(subLayerBtnClick:)];
+    
+    UIButton *customTransitionBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space, top+(height+v_space)*2, width, height)];
+    [self createButton:customTransitionBtn setTitle:@"自定义转场" addAction:@selector(customTransitionBtnClick:)];
 }
 -(void)createButton:(UIButton *)btn setTitle:(NSString *)title addAction:(SEL)action{
     [btn setTitle:title forState:UIControlStateNormal];
@@ -99,6 +103,12 @@
 #pragma mark --子图层(渐变+3D+富文本等)
 -(void)subLayerBtnClick:(UIButton *)btn{
     SublayerViewController * controller =[[SublayerViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:NO];
+}
+
+#pragma mark --自定义转场动画
+-(void)customTransitionBtnClick:(UIButton *)btn{
+    CustomTransitionViewController * controller =[[CustomTransitionViewController alloc]init];
     [self.navigationController pushViewController:controller animated:NO];
 }
 

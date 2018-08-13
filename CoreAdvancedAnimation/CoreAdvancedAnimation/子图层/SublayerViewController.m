@@ -8,6 +8,7 @@
 
 #import "SublayerViewController.h"
 #import <CoreText/CoreText.h>
+#import "UIView+UIView_Gradient.h"
 
 @interface SublayerViewController ()
 
@@ -19,8 +20,8 @@
     [super viewDidLoad];
     self.view.backgroundColor =[UIColor whiteColor];
 //    [self textLayer];
-//    [self gradientLayer];
-    [self tranFrom3D];
+    [self gradientLayer];
+//    [self tranFrom3D];
 }
 
 
@@ -92,6 +93,35 @@
     gradientLayer.startPoint = CGPointMake(0, 0);
     gradientLayer.endPoint = CGPointMake(1, 1);
     [self.view.layer addSublayer:gradientLayer];
+    
+    //使用UIView分类UIView+UIView_Gradient增加渐变色的拓展方法
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 280, 200, 30)];
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 320, 200, 30)];
+    UIView *tempView = [[UIView alloc] initWithFrame:CGRectMake(0, 360, 200, 30)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 400, 200, 30)];
+    
+    [self.view addSubview:label];
+    [self.view addSubview:btn];
+    [self.view addSubview:tempView];
+    [self.view addSubview:imageView];
+    
+    label.backgroundColor = [UIColor clearColor];
+    btn.backgroundColor = [UIColor blueColor];
+    tempView.backgroundColor = [UIColor blueColor];
+    imageView.backgroundColor = [UIColor blueColor];
+    
+    [label setGradientBackgroundWithColors:@[[UIColor redColor],[UIColor greenColor]] locations:nil startPoint:CGPointMake(0, 0) endPoint:CGPointMake(1, 0)];
+    
+    [btn setGradientBackgroundWithColors:@[[UIColor redColor],[UIColor grayColor]] locations:nil startPoint:CGPointMake(0, 0) endPoint:CGPointMake(1, 0)];
+    
+    [tempView setGradientBackgroundWithColors:@[[UIColor redColor],[UIColor yellowColor]] locations:nil startPoint:CGPointMake(0, 0) endPoint:CGPointMake(1, 0)];
+    
+    [imageView setGradientBackgroundWithColors:@[[UIColor redColor],[UIColor clearColor]] locations:nil startPoint:CGPointMake(0, 0) endPoint:CGPointMake(1, 0)];
+    
+    label.text = @"Text";
+    label.textAlignment = NSTextAlignmentCenter;
+    
+    [btn setTitle:@"Button" forState:UIControlStateNormal];
 }
 
 //富文本图层
