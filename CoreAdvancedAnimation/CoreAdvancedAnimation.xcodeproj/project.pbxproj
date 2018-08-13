@@ -30,6 +30,7 @@
 		04EE560621211B4200D74017 /* UIView+UIView_Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE560521211B4200D74017 /* UIView+UIView_Gradient.m */; };
 		04EE5609212123E700D74017 /* UILabel+MoneyAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE5608212123E700D74017 /* UILabel+MoneyAnimation.m */; };
 		04EE560D212125D700D74017 /* NumberAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE560C212125D700D74017 /* NumberAnimationViewController.m */; };
+		04EE561021215C4C00D74017 /* WTCircleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE560F21215C4C00D74017 /* WTCircleTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		04EE5608212123E700D74017 /* UILabel+MoneyAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MoneyAnimation.m"; sourceTree = "<group>"; };
 		04EE560B212125D700D74017 /* NumberAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberAnimationViewController.h; sourceTree = "<group>"; };
 		04EE560C212125D700D74017 /* NumberAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberAnimationViewController.m; sourceTree = "<group>"; };
+		04EE560E21215C4C00D74017 /* WTCircleTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTCircleTransition.h; sourceTree = "<group>"; };
+		04EE560F21215C4C00D74017 /* WTCircleTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTCircleTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,8 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				04EE560321211AE900D74017 /* WTCategory */,
-				04EE560A2121253100D74017 /* 数字跳动&翻页动画 */,
 				0477DD49211D9A1500DF72AE /* 自定义转场动画 */,
+				04EE560A2121253100D74017 /* 数字跳动&翻页动画 */,
 				0477DD45211D7E1100DF72AE /* 子图层 */,
 				0477DD41211D3CEA00DF72AE /* 贝塞尔曲线绘制火柴人 */,
 				0477DD3D211C336400DF72AE /* 粒子(点赞&雪花)动画 */,
@@ -271,6 +274,8 @@
 				0477DD4B211D9A4F00DF72AE /* CustomTransitionViewController.m */,
 				0477DD4D211D9C4000DF72AE /* SecondViewController.h */,
 				0477DD4E211D9C4000DF72AE /* SecondViewController.m */,
+				04EE560E21215C4C00D74017 /* WTCircleTransition.h */,
+				04EE560F21215C4C00D74017 /* WTCircleTransition.m */,
 			);
 			path = "自定义转场动画";
 			sourceTree = "<group>";
@@ -428,6 +433,7 @@
 				0477DD4F211D9C4000DF72AE /* SecondViewController.m in Sources */,
 				040D81AB2119996700DA4709 /* JitterViewController.m in Sources */,
 				0477DD39211ADE4C00DF72AE /* slideMenuBtn.m in Sources */,
+				04EE561021215C4C00D74017 /* WTCircleTransition.m in Sources */,
 				0477DD48211D7E4200DF72AE /* SublayerViewController.m in Sources */,
 				0477DD36211ADC7A00DF72AE /* SkidViewController.m in Sources */,
 				0477DD32211AC15C00DF72AE /* TransitionViewController.m in Sources */,

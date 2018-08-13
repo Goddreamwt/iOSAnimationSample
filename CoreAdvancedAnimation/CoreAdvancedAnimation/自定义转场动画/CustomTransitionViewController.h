@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomTransitionViewController : UIViewController
-
+@property(nonatomic,strong)UIButton *customTransitionBtn;
 @end

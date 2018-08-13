@@ -7,8 +7,9 @@
 //
 
 #import "SecondViewController.h"
+#import "WTCircleTransition.h"
 
-@interface SecondViewController ()
+@interface SecondViewController()<UINavigationControllerDelegate>
 
 @end
 
@@ -21,30 +22,29 @@
     bgView.image =[UIImage imageNamed:@"view1"];
     [self.view addSubview:bgView];
     
-    UIButton *customTransitionBtn =[[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width -100,self.view.frame.size.height -100, 60, 60)];
-    [customTransitionBtn setBackgroundColor:[UIColor redColor]];
-    [customTransitionBtn.layer setMasksToBounds:YES];
-    [customTransitionBtn.layer setCornerRadius:30];[customTransitionBtn addTarget:self action:@selector(customTransitionBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:customTransitionBtn];
+    _backBtn =[[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width -100,self.view.frame.size.height -100, 60, 60)];
+    [_backBtn setBackgroundColor:[UIColor redColor]];
+    [_backBtn.layer setMasksToBounds:YES];
+    [_backBtn.layer setCornerRadius:30];
+    [_backBtn addTarget:self action:@selector(customTransitionBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_backBtn];
     
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.delegate = self;
+}
 -(void)customTransitionBtnClick:(UIButton *)btn{
-    [self.navigationController popViewControllerAnimated:NO];
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//告诉nav，想自己自定义一个转场
+-(id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
+    if (operation == UINavigationControllerOperationPop) {
+        WTCircleTransition *trans =[WTCircleTransition new];
+        trans.isPush = NO;
+        return trans;
+    }
+    return nil;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
