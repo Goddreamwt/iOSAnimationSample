@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef enum _AnimationDirection {
+    positive  = 1,
+    negative = -1,
+} AnimationDirection;
+
 
 @interface UILabel (MoneyAnimation)
 
+//跳动效果
 - (void)wt_setNumber:(NSNumber *)number;
 
+//翻页效果
+- (void)wt_setTextPageAnimation:(NSString *)text direction:(AnimationDirection)direction;
 @end

@@ -56,26 +56,48 @@
     [self wt_setNumber:number duration:1.0];
 }
 
-- (void)wt_setNumber:(NSNumber *)number duration:(NSTimeInterval)duration {
-    
+- (void)wt_setTextPageAnimation:(NSString *)text direction:(AnimationDirection)direction{
+    UILabel *auxLabel = [[UILabel alloc] initWithFrame:self.frame];
+    auxLabel.text = text;
+    auxLabel.font = self.font;
+    auxLabel.textAlignment = self.textAlignment;
+    auxLabel.textColor = self.textColor;
+    auxLabel.backgroundColor = self.backgroundColor;
+    //    auxLabel.backgroundColor = [UIColor redColor];
+    //offset
+    CGFloat auxLabelOffset = (CGFloat)direction *
+    auxLabel.frame.size.height/2.0;
+    auxLabel.transform = CGAffineTransformScale(CGAffineTransformMakeTranslation(0.0, auxLabelOffset), 1.0, 0.1);
+    [self.superview addSubview:auxLabel];
+    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        auxLabel.transform = CGAffineTransformIdentity;
+        self.transform =  CGAffineTransformScale(CGAffineTransformMakeTranslation(0.0, -auxLabelOffset), 1.0, 0.1);
+    } completion:^(BOOL finished) {
+        self.text = auxLabel.text;
+        self.transform = CGAffineTransformIdentity;
+        [auxLabel removeFromSuperview];
+    }];
+}
+
+
+- (void)wt_setNumber:(NSNumber *)number duration:(NSTimeInterval)duration{
     [self.timer invalidate];
     self.timer = nil;
-    
+
     //变量初始化
     self.animatedNumber = @(0);
     double beginNumber = 0;
     double endNumber = [number doubleValue];
-    
+        
     NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithCapacity:0];
-    
+        
     [userInfo setObject:@(beginNumber) forKey:kBeginNumberKey];
     [userInfo setObject:number forKey:kEndNumberKey];
     [userInfo setObject:@(kRangeNumber(endNumber, duration)) forKey:kRangeNumberKey];
-    
     // 添加定时器，添加到NSRunLoop中
     self.timer = [NSTimer scheduledTimerWithTimeInterval:kFrequency target:self selector:@selector(changeAnimation:) userInfo:userInfo repeats:YES];
+
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
-    
 }
 
 - (void)changeAnimation:(NSTimer *)timer{

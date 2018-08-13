@@ -147,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				04EE560321211AE900D74017 /* WTCategory */,
-				04EE560A2121253100D74017 /* 数字跳动动画 */,
+				04EE560A2121253100D74017 /* 数字跳动&翻页动画 */,
 				0477DD49211D9A1500DF72AE /* 自定义转场动画 */,
 				0477DD45211D7E1100DF72AE /* 子图层 */,
 				0477DD41211D3CEA00DF72AE /* 贝塞尔曲线绘制火柴人 */,
@@ -286,13 +286,13 @@
 			path = WTCategory;
 			sourceTree = "<group>";
 		};
-		04EE560A2121253100D74017 /* 数字跳动动画 */ = {
+		04EE560A2121253100D74017 /* 数字跳动&翻页动画 */ = {
 			isa = PBXGroup;
 			children = (
 				04EE560B212125D700D74017 /* NumberAnimationViewController.h */,
 				04EE560C212125D700D74017 /* NumberAnimationViewController.m */,
 			);
-			path = "数字跳动动画";
+			path = "数字跳动&翻页动画";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
