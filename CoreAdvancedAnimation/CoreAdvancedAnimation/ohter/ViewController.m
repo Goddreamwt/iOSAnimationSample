@@ -17,6 +17,7 @@
 #import "CustomTransitionViewController.h"
 #import "NumberAnimationViewController.h"
 #import "BubbleDragViewController.h"
+#import "PhysicsEngineViewController.h"
 
 @interface ViewController ()
 
@@ -61,10 +62,26 @@
     [self createButton:numberAnimationBtn setTitle:@"数字跳动" addAction:@selector(numberAnimationBtnClick:)];
     
     UIButton * likeBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space+(width+l_space)*2, top+(height+v_space)*2, width, height)];
-    [self createButton:likeBtn setTitle:@"点赞动画" addAction:@selector(likeBtnClick:)];
+    [self createButton:likeBtn setTitle:@"粒子动画" addAction:@selector(likeBtnClick:)];
     
     UIButton *bdBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space, top+(height+v_space)*3, width, height)];
     [self createButton:bdBtn setTitle:@"气泡拖拽" addAction:@selector(bdBtnClick:)];
+    
+    
+    UIButton *pe2DBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space+(width+l_space), top+(height+v_space)*3, width, height)];
+    [self createButton:pe2DBtn setTitle:@"物理引擎" addAction:@selector(pe2DBtnClick:)];
+}
+
+#pragma mark --2D物理引擎
+-(void)pe2DBtnClick:(UIButton *)btn{
+    PhysicsEngineViewController * controller =[[PhysicsEngineViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:NO];
+}
+
+#pragma mark --隐式动画
+-(void)hiddenBtnClick:(UIButton *)btn{
+    HiddenAnimationViewController * controller =[[HiddenAnimationViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:NO];
 }
 
 #pragma mark --QQ气泡拖拽效果动画
@@ -91,7 +108,7 @@
     [self.navigationController pushViewController:controller animated:NO];
 }
 
-#pragma mark --点赞
+#pragma mark --粒子动画(点赞&雪花)
 -(void)likeBtnClick:(UIButton *)btn{
     LinkViewController * controller =[[LinkViewController alloc]init];
     [self.navigationController pushViewController:controller animated:NO];

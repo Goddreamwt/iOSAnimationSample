@@ -32,6 +32,7 @@
 		04EE560D212125D700D74017 /* NumberAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE560C212125D700D74017 /* NumberAnimationViewController.m */; };
 		04EE561021215C4C00D74017 /* WTCircleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE560F21215C4C00D74017 /* WTCircleTransition.m */; };
 		04EE561421217F1F00D74017 /* BubbleDragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE561321217F1F00D74017 /* BubbleDragViewController.m */; };
+		04EE5618212278E400D74017 /* PhysicsEngineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE5617212278E400D74017 /* PhysicsEngineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,8 @@
 		04EE560F21215C4C00D74017 /* WTCircleTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTCircleTransition.m; sourceTree = "<group>"; };
 		04EE561221217F1F00D74017 /* BubbleDragViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleDragViewController.h; sourceTree = "<group>"; };
 		04EE561321217F1F00D74017 /* BubbleDragViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleDragViewController.m; sourceTree = "<group>"; };
+		04EE5616212278E400D74017 /* PhysicsEngineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhysicsEngineViewController.h; sourceTree = "<group>"; };
+		04EE5617212278E400D74017 /* PhysicsEngineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhysicsEngineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,7 @@
 		040D816B2119866E00DA4709 /* CoreAdvancedAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				04EE5615212278B700D74017 /* 2D物理引擎 */,
 				04EE561121217EE000D74017 /* QQ气泡拖拽 */,
 				04EE560321211AE900D74017 /* WTCategory */,
 				0477DD49211D9A1500DF72AE /* 自定义转场动画 */,
@@ -313,6 +317,15 @@
 			path = "QQ气泡拖拽";
 			sourceTree = "<group>";
 		};
+		04EE5615212278B700D74017 /* 2D物理引擎 */ = {
+			isa = PBXGroup;
+			children = (
+				04EE5616212278E400D74017 /* PhysicsEngineViewController.h */,
+				04EE5617212278E400D74017 /* PhysicsEngineViewController.m */,
+			);
+			path = "2D物理引擎";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -445,6 +458,7 @@
 			files = (
 				0477DD4F211D9C4000DF72AE /* SecondViewController.m in Sources */,
 				040D81AB2119996700DA4709 /* JitterViewController.m in Sources */,
+				04EE5618212278E400D74017 /* PhysicsEngineViewController.m in Sources */,
 				0477DD39211ADE4C00DF72AE /* slideMenuBtn.m in Sources */,
 				04EE561021215C4C00D74017 /* WTCircleTransition.m in Sources */,
 				0477DD48211D7E4200DF72AE /* SublayerViewController.m in Sources */,
