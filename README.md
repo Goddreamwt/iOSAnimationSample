@@ -59,3 +59,9 @@
 ![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/%E6%95%88%E6%9E%9Cgif/2D%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%8A%A8%E7%94%BB.gif)
 
 ----------
+
+* 9.iCarousel_3D轮播图
+
+![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/%E6%95%88%E6%9E%9Cgif/3D%E8%BD%AE%E6%92%AD%E5%9B%BE.gif)
+
+----------
