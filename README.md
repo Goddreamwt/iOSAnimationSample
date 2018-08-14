@@ -43,3 +43,11 @@
   ![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/%E6%95%88%E6%9E%9Cgif/customAnimation.gif)
 
 ----------
+
+* 7.CoreAdvancedAnimation: iOS核心动画CoreAnimation系统进阶(仿QQ气泡拖拽效果)
+
+[ iOS核心动画CoreAnimation系统进阶(仿QQ气泡拖拽效果)](https://blog.csdn.net/wtdask/article/details/81634947)
+
+![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/%E6%95%88%E6%9E%9Cgif/%E4%BB%BFQQ%E6%8B%96%E6%8B%BD%E6%B0%94%E6%B3%A1%E6%95%88%E6%9E%9C.gif)
+
+----------
