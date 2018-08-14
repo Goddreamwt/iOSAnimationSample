@@ -16,6 +16,7 @@
 #import "SublayerViewController.h"
 #import "CustomTransitionViewController.h"
 #import "NumberAnimationViewController.h"
+#import "BubbleDragViewController.h"
 
 @interface ViewController ()
 
@@ -61,17 +62,14 @@
     
     UIButton * likeBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space+(width+l_space)*2, top+(height+v_space)*2, width, height)];
     [self createButton:likeBtn setTitle:@"点赞动画" addAction:@selector(likeBtnClick:)];
+    
+    UIButton *bdBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space, top+(height+v_space)*3, width, height)];
+    [self createButton:bdBtn setTitle:@"气泡拖拽" addAction:@selector(bdBtnClick:)];
 }
--(void)createButton:(UIButton *)btn setTitle:(NSString *)title addAction:(SEL)action{
-    [btn setTitle:title forState:UIControlStateNormal];
-    [btn addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
-    btn.titleLabel.font =[UIFont systemFontOfSize:12.0];
-    [btn setBackgroundColor:[UIColor grayColor]];
-    [self.view addSubview:btn];
-}
-#pragma mark --隐式动画
--(void)hiddenBtnClick:(UIButton *)btn{
-    HiddenAnimationViewController * controller =[[HiddenAnimationViewController alloc]init];
+
+#pragma mark --QQ气泡拖拽效果动画
+-(void)bdBtnClick:(UIButton *)btn{
+    BubbleDragViewController * controller =[[BubbleDragViewController alloc]init];
     [self.navigationController pushViewController:controller animated:NO];
 }
 
@@ -123,9 +121,12 @@
     [self.navigationController pushViewController:controller animated:NO];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)createButton:(UIButton *)btn setTitle:(NSString *)title addAction:(SEL)action{
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    btn.titleLabel.font =[UIFont systemFontOfSize:12.0];
+    [btn setBackgroundColor:[UIColor grayColor]];
+    [self.view addSubview:btn];
 }
 
 
