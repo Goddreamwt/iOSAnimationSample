@@ -18,6 +18,8 @@
 		040D81A32119872800DA4709 /* HiddenAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D81A12119872800DA4709 /* HiddenAnimationViewController.m */; };
 		040D81A721198BD900DA4709 /* WTRedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D81A621198BD900DA4709 /* WTRedView.m */; };
 		040D81AB2119996700DA4709 /* JitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D81AA2119996700DA4709 /* JitterViewController.m */; };
+		040FAF9C2126666800746C87 /* FishModelImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FAF9B2126666800746C87 /* FishModelImageView.m */; };
+		040FAFA12126666E00746C87 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FAFA02126666E00746C87 /* UIView+Extension.m */; };
 		0477DD32211AC15C00DF72AE /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DD31211AC15B00DF72AE /* TransitionViewController.m */; };
 		0477DD36211ADC7A00DF72AE /* SkidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DD35211ADC7A00DF72AE /* SkidViewController.m */; };
 		0477DD39211ADE4C00DF72AE /* slideMenuBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DD38211ADE4C00DF72AE /* slideMenuBtn.m */; };
@@ -75,6 +77,11 @@
 		040D81A621198BD900DA4709 /* WTRedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTRedView.m; sourceTree = "<group>"; };
 		040D81A92119996700DA4709 /* JitterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JitterViewController.h; sourceTree = "<group>"; };
 		040D81AA2119996700DA4709 /* JitterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JitterViewController.m; sourceTree = "<group>"; };
+		040FAF9A2126666800746C87 /* FishModelImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishModelImageView.h; sourceTree = "<group>"; };
+		040FAF9B2126666800746C87 /* FishModelImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishModelImageView.m; sourceTree = "<group>"; };
+		040FAF9E2126666E00746C87 /* GlobalDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefine.h; sourceTree = "<group>"; };
+		040FAF9F2126666E00746C87 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		040FAFA02126666E00746C87 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		0477DD30211AC15B00DF72AE /* TransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
 		0477DD31211AC15B00DF72AE /* TransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionViewController.m; sourceTree = "<group>"; };
 		0477DD34211ADC7A00DF72AE /* SkidViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkidViewController.h; sourceTree = "<group>"; };
@@ -155,9 +162,10 @@
 		040D816B2119866E00DA4709 /* CoreAdvancedAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				040FAF9D2126666E00746C87 /* Utils */,
+				040FAF992126666800746C87 /* AnimationView */,
 				04EE5615212278B700D74017 /* 2D物理引擎 */,
 				04EE561121217EE000D74017 /* QQ气泡拖拽 */,
-				04EE560321211AE900D74017 /* WTCategory */,
 				0477DD49211D9A1500DF72AE /* 自定义转场动画 */,
 				04EE560A2121253100D74017 /* 数字跳动&翻页动画 */,
 				0477DD45211D7E1100DF72AE /* 子图层 */,
@@ -224,6 +232,26 @@
 				040D81AA2119996700DA4709 /* JitterViewController.m */,
 			);
 			path = "关键帧动画";
+			sourceTree = "<group>";
+		};
+		040FAF992126666800746C87 /* AnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				040FAF9A2126666800746C87 /* FishModelImageView.h */,
+				040FAF9B2126666800746C87 /* FishModelImageView.m */,
+			);
+			path = AnimationView;
+			sourceTree = "<group>";
+		};
+		040FAF9D2126666E00746C87 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				04EE560321211AE900D74017 /* WTCategory */,
+				040FAF9E2126666E00746C87 /* GlobalDefine.h */,
+				040FAF9F2126666E00746C87 /* UIView+Extension.h */,
+				040FAFA02126666E00746C87 /* UIView+Extension.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		0477DD2F211AC15B00DF72AE /* 转场动画&组动画 */ = {
@@ -468,12 +496,14 @@
 				040D81712119866E00DA4709 /* ViewController.m in Sources */,
 				0477DD3C211AE6A200DF72AE /* slideMenuView.m in Sources */,
 				040D81A32119872800DA4709 /* HiddenAnimationViewController.m in Sources */,
+				040FAF9C2126666800746C87 /* FishModelImageView.m in Sources */,
 				0477DD40211C338300DF72AE /* LinkViewController.m in Sources */,
 				040D81A721198BD900DA4709 /* WTRedView.m in Sources */,
 				04EE5609212123E700D74017 /* UILabel+MoneyAnimation.m in Sources */,
 				040D817C2119866F00DA4709 /* main.m in Sources */,
 				0477DD44211D3D0100DF72AE /* MatchstickMenViewController.m in Sources */,
 				04EE560621211B4200D74017 /* UIView+UIView_Gradient.m in Sources */,
+				040FAFA12126666E00746C87 /* UIView+Extension.m in Sources */,
 				0477DD4C211D9A4F00DF72AE /* CustomTransitionViewController.m in Sources */,
 				04EE560D212125D700D74017 /* NumberAnimationViewController.m in Sources */,
 				040D816E2119866E00DA4709 /* AppDelegate.m in Sources */,

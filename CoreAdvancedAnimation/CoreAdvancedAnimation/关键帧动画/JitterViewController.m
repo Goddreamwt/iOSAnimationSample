@@ -8,9 +8,11 @@
 
 #define angleToRadians(angle) ((angle)/180.0 * M_PI)
 #import "JitterViewController.h"
+#import "FishModelImageView.h"
 
 @interface JitterViewController ()
 @property(nonatomic,strong)UIImageView * image;
+@property(nonatomic,strong)FishModelImageView *fishModelView;
 @end
 
 @implementation JitterViewController
@@ -22,6 +24,9 @@
     _image.image =[UIImage imageNamed:@"weixin"];
     [self.view addSubview:_image];
     
+    
+    _fishModelView =[[FishModelImageView alloc]initModelFishWithType:FishModelImageViewTypeXHY andDirection:FishModelImageViewFromLeft];
+    [self.view addSubview:_fishModelView];
 }
 
 #pragma mark -过山车动画
@@ -37,19 +42,23 @@
     
     [self.view.layer addSublayer:shapeLayer];
     
-    CALayer * carLayer =[CALayer layer];
-    carLayer.frame = CGRectMake(15, 400-18, 36, 36);
-    //寄宿图 contents属性
-    carLayer.contents =(id)([UIImage imageNamed:@"car"].CGImage);
-    carLayer.anchorPoint = CGPointMake(0.5, 0.8);//设置锚点，轮胎的位置
-    [self.view.layer addSublayer:carLayer];
     
+//    CALayer * carLayer =[CALayer layer];
+//    carLayer.frame = CGRectMake(15, 400-18, 36, 36);
+//    //寄宿图 contents属性
+//    carLayer.contents =(id)([UIImage imageNamed:@"car"].CGImage);
+//    carLayer.anchorPoint = CGPointMake(0.5, 0.8);//设置锚点，轮胎的位置
+//    [self.view.layer addSublayer:carLayer];
+    
+    _fishModelView.layer.frame = CGRectMake(15, 400-18, 36, 36);
+
+    _fishModelView.layer.anchorPoint = CGPointMake(0.5, 0.8);
     CAKeyframeAnimation * anim =[CAKeyframeAnimation animation];
     anim.keyPath = @"position";
     anim.path = path.CGPath;
     anim.duration = 4.0;
-    anim.rotationMode = kCAAnimationRotateAuto;//自动切换角度，车头的朝向
-    [carLayer addAnimation:anim forKey:nil];
+    anim.rotationMode = kCAAnimationRotateAuto;//自动切换角度
+    [_fishModelView.layer addAnimation:anim forKey:nil];
 }
 
 #pragma mark -抖动效果
