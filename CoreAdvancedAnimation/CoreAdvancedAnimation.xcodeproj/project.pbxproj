@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040AF593213397AA006F2449 /* SpringHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040AF592213397AA006F2449 /* SpringHeaderViewController.m */; };
+		040AF5972133990A006F2449 /* WTSpringHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040AF5962133990A006F2449 /* WTSpringHeaderView.m */; };
+		040AF59A21339DF5006F2449 /* UIScrollView+WTSpringHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 040AF59921339DF5006F2449 /* UIScrollView+WTSpringHeader.m */; };
 		040D816E2119866E00DA4709 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D816D2119866E00DA4709 /* AppDelegate.m */; };
 		040D81712119866E00DA4709 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D81702119866E00DA4709 /* ViewController.m */; };
 		040D81742119866E00DA4709 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040D81722119866E00DA4709 /* Main.storyboard */; };
@@ -55,6 +58,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040AF591213397AA006F2449 /* SpringHeaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpringHeaderViewController.h; sourceTree = "<group>"; };
+		040AF592213397AA006F2449 /* SpringHeaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpringHeaderViewController.m; sourceTree = "<group>"; };
+		040AF5952133990A006F2449 /* WTSpringHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTSpringHeaderView.h; sourceTree = "<group>"; };
+		040AF5962133990A006F2449 /* WTSpringHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTSpringHeaderView.m; sourceTree = "<group>"; };
+		040AF59821339DF5006F2449 /* UIScrollView+WTSpringHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+WTSpringHeader.h"; sourceTree = "<group>"; };
+		040AF59921339DF5006F2449 /* UIScrollView+WTSpringHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+WTSpringHeader.m"; sourceTree = "<group>"; };
 		040D81692119866E00DA4709 /* CoreAdvancedAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAdvancedAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		040D816C2119866E00DA4709 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		040D816D2119866E00DA4709 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -139,6 +148,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040AF59021339775006F2449 /* 弹簧Header */ = {
+			isa = PBXGroup;
+			children = (
+				040AF594213398DC006F2449 /* WTSpringHeader */,
+				040AF591213397AA006F2449 /* SpringHeaderViewController.h */,
+				040AF592213397AA006F2449 /* SpringHeaderViewController.m */,
+			);
+			path = "弹簧Header";
+			sourceTree = "<group>";
+		};
+		040AF594213398DC006F2449 /* WTSpringHeader */ = {
+			isa = PBXGroup;
+			children = (
+				040AF5952133990A006F2449 /* WTSpringHeaderView.h */,
+				040AF5962133990A006F2449 /* WTSpringHeaderView.m */,
+				040AF59821339DF5006F2449 /* UIScrollView+WTSpringHeader.h */,
+				040AF59921339DF5006F2449 /* UIScrollView+WTSpringHeader.m */,
+			);
+			path = WTSpringHeader;
+			sourceTree = "<group>";
+		};
 		040D81602119866E00DA4709 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				040FAF9D2126666E00746C87 /* Utils */,
+				040AF59021339775006F2449 /* 弹簧Header */,
 				040FAF992126666800746C87 /* AnimationView */,
 				04EE5615212278B700D74017 /* 2D物理引擎 */,
 				04EE561121217EE000D74017 /* QQ气泡拖拽 */,
@@ -492,6 +523,8 @@
 				0477DD48211D7E4200DF72AE /* SublayerViewController.m in Sources */,
 				0477DD36211ADC7A00DF72AE /* SkidViewController.m in Sources */,
 				04EE561421217F1F00D74017 /* BubbleDragViewController.m in Sources */,
+				040AF59A21339DF5006F2449 /* UIScrollView+WTSpringHeader.m in Sources */,
+				040AF5972133990A006F2449 /* WTSpringHeaderView.m in Sources */,
 				0477DD32211AC15C00DF72AE /* TransitionViewController.m in Sources */,
 				040D81712119866E00DA4709 /* ViewController.m in Sources */,
 				0477DD3C211AE6A200DF72AE /* slideMenuView.m in Sources */,
@@ -502,6 +535,7 @@
 				04EE5609212123E700D74017 /* UILabel+MoneyAnimation.m in Sources */,
 				040D817C2119866F00DA4709 /* main.m in Sources */,
 				0477DD44211D3D0100DF72AE /* MatchstickMenViewController.m in Sources */,
+				040AF593213397AA006F2449 /* SpringHeaderViewController.m in Sources */,
 				04EE560621211B4200D74017 /* UIView+UIView_Gradient.m in Sources */,
 				040FAFA12126666E00746C87 /* UIView+Extension.m in Sources */,
 				0477DD4C211D9A4F00DF72AE /* CustomTransitionViewController.m in Sources */,

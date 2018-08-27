@@ -18,6 +18,7 @@
 #import "NumberAnimationViewController.h"
 #import "BubbleDragViewController.h"
 #import "PhysicsEngineViewController.h"
+#import "SpringHeaderViewController.h"
 
 @interface ViewController ()
 
@@ -70,6 +71,14 @@
     
     UIButton *pe2DBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space+(width+l_space), top+(height+v_space)*3, width, height)];
     [self createButton:pe2DBtn setTitle:@"物理引擎" addAction:@selector(pe2DBtnClick:)];
+    
+    UIButton *springHeaderBtn =[[UIButton alloc]initWithFrame:CGRectMake(l_space+(width+l_space)*2, top+(height+v_space)*3, width, height)];
+    [self createButton:springHeaderBtn setTitle:@"弹簧Header" addAction:@selector(springHeaderBtnClick:)];
+}
+#pragma mark --弹簧Header效果
+-(void)springHeaderBtnClick:(UIButton *)btn{
+    SpringHeaderViewController * controller =[[SpringHeaderViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:NO];
 }
 
 #pragma mark --2D物理引擎
