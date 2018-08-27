@@ -68,5 +68,5 @@
 
 * 10.CoreAdvancedAnimation:弹簧Header效果
 
-![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/%E6%95%88%E6%9E%9Cgif/2D%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%8A%A8%E7%94%BB.gif)
-SrpingHeader.gif
+![image](https://github.com/Goddreamwt/iOSAnimationSample/blob/master/image/%E6%95%88%E6%9E%9Cgif/SrpingHeader.gif)
+
